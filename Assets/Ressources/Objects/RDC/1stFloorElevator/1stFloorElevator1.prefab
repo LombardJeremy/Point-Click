@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3448296445518873194}
   - component: {fileID: 5910213118270609868}
   - component: {fileID: 902470557620182424}
-  - component: {fileID: 4004323018280687702}
+  - component: {fileID: 2443311861844710854}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4004323018280687702
+--- !u!114 &2443311861844710854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,9 +85,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366127319035731261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4122b27204fda144ab5cbb72770cc0a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 38a0d12fca71e294f922b34fd04eb746, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Button
+  m_EditorClassIdentifier: Assembly-CSharp::Direction
+  Up: 0
+  Down: 0
+  Left: 0
+  Right: 1
 --- !u!1 &3370567166030207409
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +103,9 @@ GameObject:
   - component: {fileID: 7053108936212127758}
   - component: {fileID: 8796750177406715279}
   - component: {fileID: 3659759064697592829}
-  - component: {fileID: 9093132373408197379}
+  - component: {fileID: 2199851521649663778}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +168,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9093132373408197379
+--- !u!114 &2199851521649663778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,9 +177,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3370567166030207409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4122b27204fda144ab5cbb72770cc0a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 38a0d12fca71e294f922b34fd04eb746, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Button
+  m_EditorClassIdentifier: Assembly-CSharp::Direction
+  Up: 0
+  Down: 0
+  Left: 1
+  Right: 0
 --- !u!1 &3453910773639904529
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a041e82ca4c2d4b9d90b125d41c1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  data: {fileID: 11400000, guid: 7b1a46279d289bb4f980aef54b3d38d5, type: 2}
+  data: {fileID: 11400000, guid: 980cffc2a2516a14d8c851a1a96443b9, type: 2}
 --- !u!1 &6047024084447041748
 GameObject:
   m_ObjectHideFlags: 0
