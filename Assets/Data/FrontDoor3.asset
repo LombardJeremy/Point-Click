@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d397db6cb8d08214fb4df0e8405856fb, type: 3}
   m_Name: FrontDoor3
   m_EditorClassIdentifier: Assembly-CSharp::RoomData
-  Up: {fileID: 3453910773639904529, guid: c8851b968eb2d3e488c52f8251cb14d7, type: 3}
+  Up: {fileID: 3453910773639904529, guid: 1178154dce3f8cc4b9795e653ae7e029, type: 3}
   Down: {fileID: 0}
   Left: {fileID: 0}
   Right: {fileID: 0}
