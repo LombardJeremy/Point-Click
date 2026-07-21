@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject FirstRoom;
     
     public static GameManager _instance;
+
+    private List<GameObject> _inventory;
 
     private void Awake()
     {
@@ -32,5 +35,17 @@ public class GameManager : MonoBehaviour
         if (newRoom == null) return;
         Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
         Destroy(oldRoom);
+    }
+    
+    //Add object in inventory
+    public void AddObject(GameObject obj)
+    {
+        _inventory.Add(obj);
+    }
+
+    //Remove object from inventory
+    public void RemoveObject(GameObject obj)
+    {
+        _inventory.Remove(obj);
     }
 }

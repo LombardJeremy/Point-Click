@@ -11,6 +11,7 @@ public class Direction : MonoBehaviour, IInteractable
     [SerializeField] private bool Down;
     [SerializeField] private bool Left;
     [SerializeField] private bool Right;
+    [SerializeField] private bool Locked = false;
 
     private List<bool> Directions = new List<bool>();
     
