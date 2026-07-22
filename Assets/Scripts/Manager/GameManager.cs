@@ -48,4 +48,14 @@ public class GameManager : MonoBehaviour
     {
         _inventory.Remove(obj);
     }
+
+    public bool PossessObject(GameObject obj)
+    {
+
+        foreach (GameObject objOfPlayer in _inventory)
+        {
+            if (objOfPlayer == obj) return true;
+        }
+        return false;
+    }
 }

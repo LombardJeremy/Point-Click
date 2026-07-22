@@ -92,6 +92,7 @@ MonoBehaviour:
   Down: 1
   Left: 0
   Right: 0
+  Locked: 0
 --- !u!1 &3370567166030207409
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,10 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a0d12fca71e294f922b34fd04eb746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Direction
-  Up: 0
+  Up: 1
   Down: 0
   Left: 0
   Right: 0
+  Locked: 1
 --- !u!1 &3453910773639904529
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +199,8 @@ GameObject:
   - component: {fileID: 4356651668694408545}
   - component: {fileID: 4544521497027368640}
   - component: {fileID: 2537176733465809292}
+  - component: {fileID: 2899061295578305793}
+  - component: {fileID: 5326538111755341478}
   m_Layer: 5
   m_Name: StairCase1stFloor1
   m_TagString: Untagged
@@ -302,6 +306,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   data: {fileID: 11400000, guid: 953bd36d472854f42b7705f9de5fe7b5, type: 2}
+--- !u!114 &2899061295578305793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453910773639904529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3527890680d2e4e8d4b7403484ab4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Condition
+  _objectToFind: {fileID: 0}
+  _objectToInteract: {fileID: 0}
+--- !u!114 &5326538111755341478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453910773639904529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6ba5ccadfb97f47a5cf825b484b517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlockRooms
+  _arrowToUnlock: {fileID: 2199851521649663778}
 --- !u!1 &6047024084447041748
 GameObject:
   m_ObjectHideFlags: 0
