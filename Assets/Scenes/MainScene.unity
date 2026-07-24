@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   FirstRoom: {fileID: 3453910773639904529, guid: 912e744cd3102aa4db2c1544ac70ec6d, type: 3}
+  _inventory:
+  - {fileID: 11400000, guid: e220c2da1d32e0a48a37ff7cb88dbbce, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

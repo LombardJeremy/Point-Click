@@ -6,6 +6,10 @@ public class UnlockRooms : MonoBehaviour, IActionTrigger
     
     public void DoInteraction()
     {
-        if (_arrowToUnlock.Locked == true) _arrowToUnlock.Locked = false;
+        if (_arrowToUnlock.Locked == true)
+        {
+            Debug.Log("Unlock Rooms");
+            _arrowToUnlock.Locked = false;
+        }
     }
 }

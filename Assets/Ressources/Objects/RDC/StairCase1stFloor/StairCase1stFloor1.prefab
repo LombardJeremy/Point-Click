@@ -318,8 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3527890680d2e4e8d4b7403484ab4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Condition
-  _objectToFind: {fileID: 0}
-  _objectToInteract: {fileID: 0}
+  _objectToFind: {fileID: 11400000, guid: e220c2da1d32e0a48a37ff7cb88dbbce, type: 2}
+  _objectToInteract: {fileID: 3453910773639904529}
 --- !u!114 &5326538111755341478
 MonoBehaviour:
   m_ObjectHideFlags: 0

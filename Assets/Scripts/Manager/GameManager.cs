@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager _instance;
 
-    private List<GameObject> _inventory;
+    public List<Object> _inventory;
 
     private void Awake()
     {
@@ -35,26 +35,32 @@ public class GameManager : MonoBehaviour
         if (newRoom == null) return;
         Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
         Destroy(oldRoom);
+        if (newRoom.GetComponent<Condition>() != null) CheckCondition(newRoom.GetComponent<Condition>());
+    }
+
+    private void CheckCondition(Condition condition)
+    {
+        Debug.Log("CheckCondition");
+        condition.CheckCondition();
     }
     
     //Add object in inventory
-    public void AddObject(GameObject obj)
+    public void AddObject(Object obj)
     {
         _inventory.Add(obj);
     }
 
     //Remove object from inventory
-    public void RemoveObject(GameObject obj)
+    public void RemoveObject(Object obj)
     {
         _inventory.Remove(obj);
     }
 
-    public bool PossessObject(GameObject obj)
+    public bool PossessObject(Object obj)
     {
-
-        foreach (GameObject objOfPlayer in _inventory)
+        foreach (Object objOfPlayer in _inventory)
         {
-            if (objOfPlayer == obj) return true;
+            if (objOfPlayer.id == obj.id && obj.unlocked) return true;
         }
         return false;
     }

@@ -3,19 +3,16 @@ using UnityEngine;
 
 public class Condition : MonoBehaviour
 {
-    [SerializeField] private GameObject _objectToFind;
+    [SerializeField] private Object _objectToFind;
     [SerializeField] private GameObject _objectToInteract;
     private IActionTrigger _actionTrigger;
-
-    private void Awake()
-    {
-        _actionTrigger = _objectToInteract.GetComponent<IActionTrigger>();
-    }
 
     public void CheckCondition()
     {
         if (_objectToFind == null) return;
         if (_objectToInteract == null) return;
+        
+        _actionTrigger = _objectToInteract.GetComponent<UnlockRooms>();
 
         if (GameManager._instance.PossessObject(_objectToFind))
         {

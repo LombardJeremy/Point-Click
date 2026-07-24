@@ -7,4 +7,6 @@ public class Object : ScriptableObject
     public int id;
     public string name;
     public Sprite sprite;
+    public bool unlocked;
+
 }
