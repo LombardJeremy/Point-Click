@@ -5,7 +5,7 @@ using UnityEngine;
 public class Object : ScriptableObject
 {
     public int id;
-    public string name;
+    public new string name;
     public Sprite sprite;
     public bool unlocked;
 

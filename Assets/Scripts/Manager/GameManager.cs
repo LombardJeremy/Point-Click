@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject FirstRoom;
+    [SerializeField] private GameObject firstRoom;
     
     public static GameManager _instance;
 
     public List<Object> _inventory;
+
+    public Room mainRoom;
 
     private void Awake()
     {
@@ -25,9 +27,10 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (FirstRoom == null) return;
+        if (firstRoom == null) return;
         
-        Instantiate(FirstRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(firstRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        UpdateVisual(firstRoom);
     }
 
     public void LoadNewRoom(GameObject oldRoom, GameObject newRoom)
@@ -35,14 +38,15 @@ public class GameManager : MonoBehaviour
         if (newRoom == null) return;
         Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
         Destroy(oldRoom);
-        if (newRoom.GetComponent<Condition>() != null) CheckCondition(newRoom.GetComponent<Condition>());
+        UpdateVisual(newRoom);
     }
 
-    private void CheckCondition(Condition condition)
+    public void UpdateVisual(GameObject newRoom)
     {
-        Debug.Log("CheckCondition");
-        condition.CheckCondition();
+        mainRoom.data = newRoom.GetComponent<RoomSub>().CurrentRoomData;
+        //TODO update position of visual & button
     }
+    
     
     //Add object in inventory
     public void AddObject(Object obj)
@@ -60,7 +64,12 @@ public class GameManager : MonoBehaviour
     {
         foreach (Object objOfPlayer in _inventory)
         {
-            if (objOfPlayer.id == obj.id && obj.unlocked) return true;
+            Debug.Log(objOfPlayer.unlocked);
+            if (objOfPlayer.id == obj.id && objOfPlayer.unlocked)
+            {
+                Debug.Log(objOfPlayer.unlocked + " c fou ce qui se passe");
+                return true;
+            }
         }
         return false;
     }

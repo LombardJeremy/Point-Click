@@ -92,7 +92,7 @@ MonoBehaviour:
   Down: 1
   Left: 0
   Right: 0
-  Locked: 1
+  Locked: 0
 --- !u!1 &3370567166030207409
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 2899061295578305793}
   - component: {fileID: 5326538111755341478}
   m_Layer: 5
-  m_Name: StairCase1stFloor1
+  m_Name: MainLobbyFirstFloor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a041e82ca4c2d4b9d90b125d41c1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  data: {fileID: 11400000, guid: 953bd36d472854f42b7705f9de5fe7b5, type: 2}
+  data: {fileID: 11400000, guid: bff507ad8f67d684fa993aa1073b67ad, type: 2}
 --- !u!114 &2899061295578305793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Condition
   _objectToFind: {fileID: 11400000, guid: e220c2da1d32e0a48a37ff7cb88dbbce, type: 2}
+  _objectToInteract: {fileID: 3453910773639904529}
 --- !u!114 &5326538111755341478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,10 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6ba5ccadfb97f47a5cf825b484b517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockRooms
-  Up: 1
-  Down: 0
-  Left: 0
-  Right: 0
+  _arrowToUnlock: {fileID: 2199851521649663778}
 --- !u!1 &6047024084447041748
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 923fe9be55a99bc4094778a6cd1604d8, type: 3}
+  m_Sprite: {fileID: 6790916985205571482, guid: 27e219c379b14ea41af47803db4af97f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

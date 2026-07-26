@@ -4,15 +4,20 @@ using UnityEngine;
 public class Condition : MonoBehaviour
 {
     [SerializeField] private Object _objectToFind;
-    [SerializeField] private GameObject _objectToInteract;
     private IActionTrigger _actionTrigger;
+
+    private void Start()
+    {
+        CheckCondition();
+    }
 
     public void CheckCondition()
     {
         if (_objectToFind == null) return;
-        if (_objectToInteract == null) return;
         
-        _actionTrigger = _objectToInteract.GetComponent<UnlockRooms>();
+        Debug.Log("Check Condition");
+        
+        _actionTrigger = GetComponent<IActionTrigger>();
 
         if (GameManager._instance.PossessObject(_objectToFind))
         {

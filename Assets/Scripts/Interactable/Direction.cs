@@ -7,11 +7,11 @@ public class Direction : MonoBehaviour, IInteractable
 {
     private Room CurrentRoom;
 
-    [SerializeField] private bool Up;
-    [SerializeField] private bool Down;
-    [SerializeField] private bool Left;
-    [SerializeField] private bool Right;
-    [SerializeField] public bool Locked;
+    [SerializeField] public bool Up;
+    [SerializeField] public bool Down;
+    [SerializeField] public bool Left;
+    [SerializeField] public bool Right;
+    public bool Locked;
 
     private List<bool> Directions = new List<bool>();
     
@@ -28,7 +28,7 @@ public class Direction : MonoBehaviour, IInteractable
     public void OnPointerClick(PointerEventData eventData)
     {
         // eventData.button permet de savoir si c'est un clic gauche ou droit
-        if (eventData.button == PointerEventData.InputButton.Left && Locked == false)
+        if (eventData.button == PointerEventData.InputButton.Left && !Locked)
         {
             Debug.Log("DIRECTION cliquée : " + gameObject.name);
 
