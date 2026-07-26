@@ -44,7 +44,30 @@ public class GameManager : MonoBehaviour
     public void UpdateVisual(GameObject newRoom)
     {
         mainRoom.data = newRoom.GetComponent<RoomSub>().CurrentRoomData;
-        //TODO update position of visual & button
+        Arrow[] UIArrows = newRoom.GetComponentsInChildren<Arrow>();
+
+        List<Direction> UXArrows = mainRoom.arrows;
+
+        foreach (var visualArrow in UIArrows)
+        {
+            if (visualArrow.Up && visualArrow.isVisible)
+            {
+                UXArrows[0].GetComponent<RectTransform>().anchoredPosition = visualArrow.GetComponent<RectTransform>().anchoredPosition;
+            }
+            if (visualArrow.Down && visualArrow.isVisible)
+            {
+                UXArrows[1].GetComponent<RectTransform>().anchoredPosition = visualArrow.GetComponent<RectTransform>().anchoredPosition;
+            }
+            if (visualArrow.Left && visualArrow.isVisible)
+            {
+                UXArrows[2].GetComponent<RectTransform>().anchoredPosition = visualArrow.GetComponent<RectTransform>().anchoredPosition;
+            }
+            if (visualArrow.Right && visualArrow.isVisible)
+            {
+                UXArrows[3].GetComponent<RectTransform>().anchoredPosition = visualArrow.GetComponent<RectTransform>().anchoredPosition;
+            }
+        }
+        
     }
     
     

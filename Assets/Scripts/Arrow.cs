@@ -6,4 +6,5 @@ public class Arrow : MonoBehaviour
     [SerializeField] public bool Down;
     [SerializeField] public bool Left;
     [SerializeField] public bool Right;
+    [SerializeField] public bool isVisible = true;
 }

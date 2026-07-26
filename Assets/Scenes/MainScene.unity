@@ -163,9 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bf47da1b33ba446a36e4c32cabc4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  FirstRoom: {fileID: 3453910773639904529, guid: 912e744cd3102aa4db2c1544ac70ec6d, type: 3}
+  firstRoom: {fileID: 3453910773639904529, guid: 8f1a98700a281f44e86d3c823f3b9293, type: 3}
   _inventory:
   - {fileID: 11400000, guid: e220c2da1d32e0a48a37ff7cb88dbbce, type: 2}
+  mainRoom: {fileID: 6165393504973557112}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
