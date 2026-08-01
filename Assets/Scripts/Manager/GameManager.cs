@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager _instance;
 
-    public List<Object> _inventory;
+    public List<UnlockableObject> _inventory;
 
     public Room mainRoom;
 
@@ -67,25 +67,24 @@ public class GameManager : MonoBehaviour
                 UXArrows[3].GetComponent<RectTransform>().anchoredPosition = visualArrow.GetComponent<RectTransform>().anchoredPosition;
             }
         }
-        
     }
     
     
     //Add object in inventory
-    public void AddObject(Object obj)
+    public void AddObject(UnlockableObject obj)
     {
         _inventory.Add(obj);
     }
 
     //Remove object from inventory
-    public void RemoveObject(Object obj)
+    public void RemoveObject(UnlockableObject obj)
     {
         _inventory.Remove(obj);
     }
 
-    public bool PossessObject(Object obj)
+    public bool PossessObject(UnlockableObject obj)
     {
-        foreach (Object objOfPlayer in _inventory)
+        foreach (UnlockableObject objOfPlayer in _inventory)
         {
             Debug.Log(objOfPlayer.unlocked);
             if (objOfPlayer.id == obj.id && objOfPlayer.unlocked)

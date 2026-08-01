@@ -92,7 +92,7 @@ MonoBehaviour:
   Down: 1
   Left: 0
   Right: 0
-  Locked: 1
+  Locked: 0
 --- !u!1 &3370567166030207409
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   data: {fileID: 11400000, guid: 953bd36d472854f42b7705f9de5fe7b5, type: 2}
+  arrows: []
 --- !u!114 &2899061295578305793
 MonoBehaviour:
   m_ObjectHideFlags: 0

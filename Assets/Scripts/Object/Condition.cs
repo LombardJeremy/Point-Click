@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Condition : MonoBehaviour
 {
-    [SerializeField] private Object _objectToFind;
+    [SerializeField] private UnlockableObject _objectToFind;
     private IActionTrigger _actionTrigger;
 
     private void Start()
