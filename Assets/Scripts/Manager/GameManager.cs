@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public Room mainRoom;
 
+    private GameObject _currentRoom;
+
     private void Awake()
     {
         if (_instance == null)
@@ -29,16 +31,16 @@ public class GameManager : MonoBehaviour
     {
         if (firstRoom == null) return;
         
-        Instantiate(firstRoom, new Vector3(0, 0, 0), Quaternion.identity);
-        UpdateVisual(firstRoom);
+        _currentRoom = Instantiate(firstRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        UpdateVisual(_currentRoom);
     }
 
-    public void LoadNewRoom(GameObject oldRoom, GameObject newRoom)
+    public void LoadNewRoom(GameObject newRoom)
     {
         if (newRoom == null) return;
-        Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
-        Destroy(oldRoom);
-        UpdateVisual(newRoom);
+        Destroy(_currentRoom);
+        _currentRoom = Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
+        UpdateVisual(_currentRoom);
     }
 
     public void UpdateVisual(GameObject newRoom)
@@ -47,7 +49,13 @@ public class GameManager : MonoBehaviour
         Arrow[] UIArrows = newRoom.GetComponentsInChildren<Arrow>();
 
         List<Direction> UXArrows = mainRoom.arrows;
+        List<GameObject> UXArrowsOgPos = mainRoom.arrowsOgPos;
 
+        UXArrows[0].GetComponent<RectTransform>().anchoredPosition = UXArrowsOgPos[0].GetComponent<RectTransform>().anchoredPosition;
+        UXArrows[1].GetComponent<RectTransform>().anchoredPosition = UXArrowsOgPos[1].GetComponent<RectTransform>().anchoredPosition;
+        UXArrows[2].GetComponent<RectTransform>().anchoredPosition = UXArrowsOgPos[2].GetComponent<RectTransform>().anchoredPosition;
+        UXArrows[3].GetComponent<RectTransform>().anchoredPosition = UXArrowsOgPos[3].GetComponent<RectTransform>().anchoredPosition;
+        
         foreach (var visualArrow in UIArrows)
         {
             if (visualArrow.Up && visualArrow.isVisible)

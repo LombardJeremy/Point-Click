@@ -32,21 +32,23 @@ public class Direction : MonoBehaviour, IInteractable
         {
             Debug.Log("DIRECTION cliquée : " + gameObject.name);
 
+            RoomData currentRoomData = GameManager._instance.mainRoom.data;
+
             if (Up)
             {
-                GameManager._instance.LoadNewRoom(CurrentRoom.gameObject, CurrentRoom.data.Up);
+                GameManager._instance.LoadNewRoom(currentRoomData.Up);
             }
             else if (Down)
             {
-                GameManager._instance.LoadNewRoom(CurrentRoom.gameObject, CurrentRoom.data.Down);
+                GameManager._instance.LoadNewRoom(currentRoomData.Down);
             }
             else if (Left)
             {
-                GameManager._instance.LoadNewRoom(CurrentRoom.gameObject, CurrentRoom.data.Left);
+                GameManager._instance.LoadNewRoom(currentRoomData.Left);
             }
             else if (Right)
             {
-                GameManager._instance.LoadNewRoom(CurrentRoom.gameObject, CurrentRoom.data.Right);
+                GameManager._instance.LoadNewRoom(currentRoomData.Right);
             }
         }
     }
